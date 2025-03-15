@@ -1,0 +1,42 @@
+<div class="login-container" id="auth-container">
+    <h2 class="h2-login">Create an Account</h2>
+
+    <form hx-post="/register"
+          hx-ext="json-enc"
+          hx-trigger="submit"
+          hx-target="body" 
+          hx-swap="outerHTML"
+          hx-on::after-request=
+          "if (event.detail.xhr.status === 400) { 
+            let t = document.getElementById('register-fail-text');
+            t.textContent = event.detail.xhr.responseText;
+            t.style.display = 'block';
+          }">
+
+        <input class="input-login" type="text" name="username" placeholder="Username" required>
+        <input class="input-login" type="password" name="password" placeholder="Password" required>
+        <input class="input-login" type="text" name="invite_code" placeholder="Invite Code" required>
+        
+        <button type="submit" class="login-btn">Register</button>
+    </form>
+
+    <p id="register-fail-text"
+    style=
+    "color:#d32f5f;
+    font-size:14px;
+    font-weight:bold;
+    margin-top: 10px;
+    background-color:#ffebf0;
+    padding:8px;
+    border-radius:6px;
+    display:none;"></p>
+
+    <div class="no-account-yet">
+        <a href="#" 
+           hx-get="/login" 
+           hx-target="#auth-container"
+           hx-swap="outerHTML">
+            Already have an account? Login here.
+        </a>
+    </div>
+</div>
