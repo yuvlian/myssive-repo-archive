@@ -1,0 +1,3 @@
+[submodule "res/rail_data/dim"]
+	path = res/rail_data/dim
+	url = https://gitlab.com/Dimbreath/turnbasedgamedata.git

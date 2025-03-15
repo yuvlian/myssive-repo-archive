@@ -1,0 +1,22 @@
+{
+  "workspace": [
+    "common",
+    "database",
+    "dispatch-server",
+    "game-server",
+    "hsr-protobuf",
+    "sdk-server"
+  ],
+  "lint": {
+    "exclude": ["hsr-protobuf/"]
+  },
+  "fmt": {
+    "exclude": ["hsr-protobuf/"]
+  },
+  "imports": {
+    "@bufbuild/protobuf": "npm:@bufbuild/protobuf@^2.2.3",
+    "@std/encoding": "jsr:@std/encoding@^1.0.6",
+    "hono": "npm:hono@^4.6.15",
+    "long": "npm:long@^5.2.3"
+  }
+}

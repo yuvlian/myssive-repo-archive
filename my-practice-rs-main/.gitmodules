@@ -1,0 +1,3 @@
+[submodule "rust-by-practice"]
+	path = rust-by-practice
+	url = https://github.com/sunface/rust-by-practice.git

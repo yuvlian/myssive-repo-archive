@@ -1,0 +1,6 @@
+[submodule "resource/bh3_data"]
+	path = resource/bh3_data
+	url = https://github.com/DevilProMT/BH3-Data
+[submodule "hi3-proto/proto"]
+	path = hi3-proto/proto
+	url = https://git.neonteam.dev/amizing/BH3-Proto

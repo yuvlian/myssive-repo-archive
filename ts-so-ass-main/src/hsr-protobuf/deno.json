@@ -1,0 +1,7 @@
+{
+  "name": "@scope/hsr-protobuf",
+  "version": "2.7.0",
+  "exports": {
+    ".": "./lib.ts"
+  }
+}

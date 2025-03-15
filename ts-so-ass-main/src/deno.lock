@@ -1,0 +1,33 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@std/encoding@^1.0.6": "1.0.6",
+    "npm:@bufbuild/protobuf@^2.2.3": "2.2.3",
+    "npm:hono@^4.6.15": "4.6.15",
+    "npm:long@^5.2.3": "5.2.3"
+  },
+  "jsr": {
+    "@std/encoding@1.0.6": {
+      "integrity": "ca87122c196e8831737d9547acf001766618e78cd8c33920776c7f5885546069"
+    }
+  },
+  "npm": {
+    "@bufbuild/protobuf@2.2.3": {
+      "integrity": "sha512-tFQoXHJdkEOSwj5tRIZSPNUuXK3RaR7T1nUrPgbYX1pUbvqqaaZAsfo+NXBPsz5rZMSKVFrgK1WL8Q/MSLvprg=="
+    },
+    "hono@4.6.15": {
+      "integrity": "sha512-OiQwvAOAaI2JrABBH69z5rsctHDzFzIKJge0nYXgtzGJ0KftwLWcBXm1upJC23/omNRtnqM0gjRMbtXshPdqhQ=="
+    },
+    "long@5.2.3": {
+      "integrity": "sha512-lcHwpNoggQTObv5apGNCTdJrO69eHOZMi4BNC+rTLER8iHAqGrUVeLh/irVIM7zTw2bOXA8T6uNPeujwOLg/2Q=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/encoding@^1.0.6",
+      "npm:@bufbuild/protobuf@^2.2.3",
+      "npm:hono@^4.6.15",
+      "npm:long@^5.2.3"
+    ]
+  }
+}

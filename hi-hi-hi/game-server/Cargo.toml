@@ -1,0 +1,24 @@
+[package]
+name = "game-server"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description.workspace = true
+homepage.workspace = true
+repository.workspace = true
+readme.workspace = true
+
+[dependencies]
+bytes.workspace = true
+tokio.workspace = true
+hi3-proto.workspace = true
+database.workspace = true
+paste.workspace = true
+chrono.workspace = true
+sqlx.workspace = true
+resource.workspace = true
+cfg-utils.workspace = true
+
+[build-dependencies]
+walkdir.workspace = true

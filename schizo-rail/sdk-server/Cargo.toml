@@ -1,0 +1,21 @@
+[package]
+name = "sdk-server"
+version.workspace = true
+edition.workspace = true
+
+# Commented by default
+[[bin]]
+name = "sdk-server"
+path = "src/main.rs"
+
+[lib]
+name = "sdk_server"
+path = "src/lib.rs"
+
+[dependencies]
+ohkami.workspace = true
+smol.workspace = true
+
+[build-dependencies]
+sr-proto.workspace = true
+rbase64.workspace = true

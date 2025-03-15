@@ -1,0 +1,28 @@
+[project]
+name = "ayakarail"
+version = "0.1.0"
+description = "yet another shitcode"
+license = "CC0-1.0" # EXCLUDING kcp.py
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "asyncio>=3.4.3",
+    "betterproto>=1.2.5",
+    "fastapi>=0.115.8",
+    "logging>=0.4.9.6",
+    "motor>=3.7.0",
+    "nazo-rand>=0.1.1",
+    "pathlib>=1.0.1",
+    "pydantic>=2.10.6",
+    "typing>=3.10.0.0",
+    "uvicorn>=0.34.0",
+]
+
+[tool.ruff]
+exclude = [
+    "./pkg/game_server/kcp.py",
+    "./pkg/rail_proto/lib.py",
+]
+
+[tool.ruff.lint]
+ignore = ["F405", "F403"]

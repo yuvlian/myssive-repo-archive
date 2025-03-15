@@ -1,0 +1,3 @@
+ignore = [
+    "./hi3-proto/"
+]

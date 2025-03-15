@@ -1,0 +1,21 @@
+[package]
+name = "game-server"
+version.workspace = true
+edition.workspace = true
+
+# Commented by default
+[[bin]]
+name = "game-server"
+path = "src/main.rs"
+
+[lib]
+name = "game_server"
+path = "src/lib.rs"
+
+[dependencies]
+bytes.workspace = true
+smol.workspace = true
+sr-proto.workspace = true
+
+[build-dependencies]
+sr-proto.workspace = true

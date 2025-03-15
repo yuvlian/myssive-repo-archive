@@ -1,0 +1,71 @@
+[workspace]
+resolver = "3"
+members = ["cfg-utils", "common", "database", "ef-proto", "game-server", "resource", "sdk-server"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["Yulian <yuvlian@naver.com>"]
+license = "Zlib"
+description = "endfield sucks"
+homepage = "https://git.neonteam.dev/yulian/mayfield"
+repository = "https://git.neonteam.dev/yulian/mayfield"
+readme = "README.md"
+
+[workspace.dependencies]
+axum = "0.8.1"
+tokio = { version = "1.43.0", features = ["full"] }
+axum-server = "0.7.1"
+bytes = "1.10.0"
+itertools = "0.14.0"
+prost = "0.13.4"
+prost-build = "0.13.4"
+prost-types = "0.13.4"
+rust-embed = "8.5.0"
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.138"
+sqlx = { version = "0.8.3", features = [ "runtime-tokio", "sqlite", "derive" ] }
+toml = "0.8.20"
+chrono = "0.4.39"
+heck = "0.5.0"
+paste = "1.0.15"
+rand = "0.9.0"
+regex = "1.11.1"
+walkdir = "2.5.0"
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"
+ansi_term = "0.12.1"
+# local deps
+cfg-utils = { path = "cfg-utils/" }
+common = { path = "common/" }
+database = { path = "database/" }
+ef-proto = { path = "ef-proto/" }
+resource = { path = "resource/" }
+
+[profile.release]
+opt-level = 3
+strip = true
+lto = "fat"
+panic = "abort"
+incremental = false
+codegen-units = 1
+
+[profile.release.build-override]
+opt-level = 3
+strip = true
+codegen-units = 1
+
+[profile.dev]
+opt-level = 0
+strip = "none"
+lto = "off"
+panic = "abort"
+incremental = true
+# i need to save storage...
+# this will cause longer compile but whatever.
+codegen-units = 64
+
+[profile.dev.build-override]
+opt-level = 0
+incremental = true
+codegen-units = 64

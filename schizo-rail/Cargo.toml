@@ -1,0 +1,44 @@
+cargo-features = ["codegen-backend"]
+
+[workspace]
+members = [ "game-server", "one-bin","sdk-server"]
+resolver = "3"
+
+[workspace.package]
+edition = "2024"
+version = "0.0.1"
+
+[workspace.dependencies]
+bytes = "1.9.0"
+sr-proto = { git = "https://github.com/f2pqingque/sr-proto", rev = "ddd4db3" }
+ohkami = { version = "0.20.0", features = ["rt_smol"] }
+game-server = { path = "game-server/" }
+sdk-server = { path = "sdk-server/" }
+smol = "2.0.2"
+rbase64 = "2.0.3"
+
+[profile.release]
+incremental = false
+codegen-backend = "llvm"
+strip = true
+lto = true
+opt-level = "z"
+codegen-units = 1
+panic = "abort"
+
+[profile.release.build-override]
+incremental = false
+codegen-backend = "llvm"
+strip = true
+opt-level = "z"
+codegen-units = 1
+
+[profile.dev]
+opt-level = 0
+panic = "abort"
+incremental = true
+codegen-units = 384
+
+[profile.dev.build-override]
+incremental = true
+codegen-units = 384

@@ -1,0 +1,8 @@
+[package]
+name = "one-bin"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+game-server.workspace = true
+sdk-server.workspace = true

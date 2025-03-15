@@ -1,0 +1,14 @@
+pub mod api_game_bulletin_version;
+pub mod api_game_get_latest;
+pub mod api_meta;
+pub mod api_remote_config_game;
+pub mod api_remote_config_network;
+pub mod api_remote_config_server;
+pub mod app_config;
+pub mod game_user_zone_whitelist;
+pub mod u8_pay_product_list;
+pub mod u8_user_auth_token;
+pub mod user_auth_token_email;
+pub mod user_info_basic;
+pub mod user_oauth_check_whitelist;
+pub mod user_oauth_grant;
