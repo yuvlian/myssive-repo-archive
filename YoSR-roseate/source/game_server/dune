@@ -1,0 +1,4 @@
+(executable
+ (name game_server)
+ (libraries protocol command lwt.unix pbrt base64 hex config))
+ (include_subdirs qualified)

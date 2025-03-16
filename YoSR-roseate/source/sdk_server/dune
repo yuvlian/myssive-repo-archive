@@ -1,0 +1,4 @@
+(executable
+ (name sdk_server)
+ (libraries protocol pbrt base64 tiny_httpd config))
+ (include_subdirs qualified)

@@ -1,0 +1,27 @@
+(lang dune 3.16)
+
+(name roseate_ml)
+
+(generate_opam_files true)
+
+(source
+ (github yuvlian/roseate_ml))
+
+(authors "xeondev")
+
+(maintainers "Yulian")
+
+(license "MIT License")
+
+(documentation https://github.com/yuvlian/roseate_ml/blob/main/README.md)
+
+(package
+ (name roseate_ml)
+ (synopsis "rail game server")
+ (description "a server reimplementation for a certain rail game")
+ (allow_empty)
+ (depends ocaml dune pbrt base64 tiny_httpd (lwt (= unix)) hex)
+ (tags
+  ("anime" "server")))
+
+; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html

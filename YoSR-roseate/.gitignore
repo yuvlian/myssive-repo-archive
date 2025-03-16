@@ -1,0 +1,5 @@
+_build/
+source/protocol/protocol.proto
+source/command/cmd.rs
+source/command/rs_to_ml.py
+source/game_server/handlers/player/watermark.lua
